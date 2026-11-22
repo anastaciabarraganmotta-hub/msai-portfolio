@@ -66,6 +66,14 @@
   .chat-form button:hover{background:var(--blue-dark)}
   .chat-form button:disabled{opacity:.6;cursor:wait}
   .chat-note{margin:0;padding:0 10px 10px;font-size:12px;line-height:1.4;color:var(--ink-soft);text-align:center}
+
+  /* En el teléfono: el nombre y la frase principal van antes de la foto, para que se lean sin desplazarse */
+  @media (max-width:860px){
+    .cols{display:flex;flex-direction:column;align-items:stretch;gap:0}
+    .cols > aside, .cols > main{display:contents}
+    .cols main > h1{order:-2}
+    .cols main > .quote{order:-1}
+  }
 </style>
 </head>
 <body>
@@ -107,8 +115,9 @@
       <p class="quote">
         Soy enfermera epidemióloga, con años de experiencia en hospitales y en la prevención y el control
         de enfermedades. En mi tesis encontré que solo 5 de cada 10 estudiantes de la Universidad de Puerto Rico
-        en Cayey hacen actividad física. Si usted dirige un hospital o una clínica y quiere prevenir enfermedades entre sus
-        pacientes, escríbame desde el <a href="#contact">formulario de Contacto</a>.
+        en Cayey hacen actividad física. Si usted está a cargo del control de infecciones en una clínica y su personal
+        no siempre usa el equipo de protección como debe, puedo revisar cómo lo usan y recomendarle mejoras:
+        escríbame desde el <a href="#contact">formulario de Contacto</a>.
       </p>
 
       <!-- ===== EDIT 5 of 5 — four project cards ===== -->
